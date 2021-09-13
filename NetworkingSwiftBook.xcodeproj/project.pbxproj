@@ -14,9 +14,10 @@
 		3C7B22A226EE282600926EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B22A026EE282600926EE3 /* LaunchScreen.storyboard */; };
 		3C7B22AA26EE2CD600926EE3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22A926EE2CD600926EE3 /* MainCollectionViewController.swift */; };
 		3C7B22AE26EE2D1800926EE3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22AD26EE2D1800926EE3 /* ImageViewController.swift */; };
-		3C7B22B026EE2D2700926EE3 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22AF26EE2D2700926EE3 /* CoursesViewController.swift */; };
 		3C7B22B226EE2E6900926EE3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B126EE2E6900926EE3 /* UserActionCell.swift */; };
 		3C7B22B426EE2F4500926EE3 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */; };
+		3C7B22B626EF78C700926EE3 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B526EF78C600926EE3 /* Course.swift */; };
+		3C7B22B826EFBE8300926EE3 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,10 @@
 		3C7B22A326EE282600926EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C7B22A926EE2CD600926EE3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		3C7B22AD26EE2D1800926EE3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		3C7B22AF26EE2D2700926EE3 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		3C7B22B126EE2E6900926EE3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
 		3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
+		3C7B22B526EF78C600926EE3 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,10 @@
 			children = (
 				3C7B229526EE282200926EE3 /* AppDelegate.swift */,
 				3C7B229726EE282200926EE3 /* SceneDelegate.swift */,
+				3C7B22B526EF78C600926EE3 /* Course.swift */,
 				3C7B22A926EE2CD600926EE3 /* MainCollectionViewController.swift */,
 				3C7B22AD26EE2D1800926EE3 /* ImageViewController.swift */,
-				3C7B22AF26EE2D2700926EE3 /* CoursesViewController.swift */,
+				3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */,
 				3C7B22B126EE2E6900926EE3 /* UserActionCell.swift */,
 				3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */,
 				3C7B229B26EE282200926EE3 /* Main.storyboard */,
@@ -149,13 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7B22B626EF78C700926EE3 /* Course.swift in Sources */,
+				3C7B22B826EFBE8300926EE3 /* CoursesTableViewController.swift in Sources */,
 				3C7B229626EE282200926EE3 /* AppDelegate.swift in Sources */,
 				3C7B22AA26EE2CD600926EE3 /* MainCollectionViewController.swift in Sources */,
 				3C7B22B226EE2E6900926EE3 /* UserActionCell.swift in Sources */,
 				3C7B22AE26EE2D1800926EE3 /* ImageViewController.swift in Sources */,
 				3C7B22B426EE2F4500926EE3 /* CoursesCell.swift in Sources */,
 				3C7B229826EE282200926EE3 /* SceneDelegate.swift in Sources */,
-				3C7B22B026EE2D2700926EE3 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

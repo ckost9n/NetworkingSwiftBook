@@ -9,6 +9,11 @@ import UIKit
 
 enum UserActions: String, CaseIterable {
     case downloadImage = "Download Image"
+    case exampleOne = "Example One"
+    case exampleTwo = "Example exampleTwo"
+    case exampleThree = "Example Three"
+    case exampleFour = "Example Four"
+    case ourCourses = "Our Courses"
 }
 
 class MainCollectionViewController: UICollectionViewController {
@@ -19,9 +24,25 @@ class MainCollectionViewController: UICollectionViewController {
 
 
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier != "showImage" {
+            let coursesVC = segue.destination as! CoursesTableViewController
+            
+            switch segue.identifier {
+            case "exampleOne":
+                coursesVC.fetchDataV1()
+            case "exampleTwo":
+                coursesVC.fetchDataV2()
+            case "exampleThree":
+                coursesVC.fetchDataV3()
+            case "exampleFour":
+                coursesVC.fetchDataV4()
+            case "ourCourses":
+                coursesVC.fetchData()
+            default: break
+            }
+        }
     }
 
 
@@ -49,6 +70,16 @@ class MainCollectionViewController: UICollectionViewController {
         switch userAction {
         case .downloadImage:
             performSegue(withIdentifier: "showImage", sender: self)
+        case .exampleOne:
+            performSegue(withIdentifier: "exampleOne", sender: self)
+        case .exampleTwo:
+            performSegue(withIdentifier: "exampleTwo", sender: self)
+        case .exampleThree:
+            performSegue(withIdentifier: "exampleThree", sender: self)
+        case .exampleFour:
+            performSegue(withIdentifier: "exampleFour", sender: self)
+        case .ourCourses:
+            performSegue(withIdentifier: "ourCourses", sender: self)
         }
     }
 
