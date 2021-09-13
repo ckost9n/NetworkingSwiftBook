@@ -14,6 +14,8 @@ enum UserActions: String, CaseIterable {
 class MainCollectionViewController: UICollectionViewController {
     
     private let userActions = UserActions.allCases
+    
+    private let showImageSegue = "showImage"
 
 
     // MARK: - Navigation
@@ -40,5 +42,24 @@ class MainCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let userAction = userActions[indexPath.item]
+        
+        switch userAction {
+        case .downloadImage:
+            performSegue(withIdentifier: "showImage", sender: self)
+        }
+    }
 
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width - 48, height: 100)
+    }
+    
 }
