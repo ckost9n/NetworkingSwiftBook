@@ -121,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="124" id="okH-7Z-szQ" customClass="CoursesCell" customModule="NetworkingSwiftBook" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseCell" rowHeight="124" id="okH-7Z-szQ" customClass="CoursesCell" customModule="NetworkingSwiftBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="124"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="okH-7Z-szQ" id="kmH-cs-16X">
@@ -146,9 +146,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-G0-8ho">
-                                            <rect key="frame" x="166" y="11" width="242" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of courses" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-G0-8ho">
+                                            <rect key="frame" x="166" y="24" width="242" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -162,9 +162,9 @@
                                         <constraint firstItem="5rY-AL-4dt" firstAttribute="top" secondItem="7ak-74-FTc" secondAttribute="bottom" constant="8" symbolic="YES" id="Xqx-mp-Ql9"/>
                                         <constraint firstItem="ik0-uY-wWc" firstAttribute="top" secondItem="kmH-cs-16X" secondAttribute="top" id="bJT-Zg-4Pa"/>
                                         <constraint firstAttribute="trailing" secondItem="5rY-AL-4dt" secondAttribute="trailing" constant="6" id="guH-pJ-1Ot"/>
-                                        <constraint firstItem="vtt-G0-8ho" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ik0-uY-wWc" secondAttribute="trailing" constant="8" symbolic="YES" id="j5L-3h-74L"/>
+                                        <constraint firstItem="vtt-G0-8ho" firstAttribute="leading" secondItem="ik0-uY-wWc" secondAttribute="trailing" constant="8" symbolic="YES" id="j5L-3h-74L"/>
                                         <constraint firstAttribute="bottom" secondItem="5rY-AL-4dt" secondAttribute="bottom" constant="11" id="pwj-ME-dyO"/>
-                                        <constraint firstItem="vtt-G0-8ho" firstAttribute="top" secondItem="kmH-cs-16X" secondAttribute="top" constant="11" id="tFj-GU-HTG"/>
+                                        <constraint firstItem="vtt-G0-8ho" firstAttribute="top" secondItem="kmH-cs-16X" secondAttribute="top" constant="24" id="tFj-GU-HTG"/>
                                         <constraint firstAttribute="trailing" secondItem="vtt-G0-8ho" secondAttribute="trailing" constant="6" id="uz6-iJ-ydA"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -185,7 +185,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKN-r3-WbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="317"/>
+            <point key="canvasLocation" x="1950.7246376811595" y="316.07142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4jB-Iz-mPS">

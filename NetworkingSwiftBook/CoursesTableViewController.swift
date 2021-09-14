@@ -13,21 +13,29 @@ class CoursesTableViewController: UITableViewController {
     private let jsonUrlTwo = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
     private let jsonUrlThree = "https://swiftbook.ru//wp-content/uploads/api/api_website_description"
     private let jsonUrlFour = "https://swiftbook.ru//wp-content/uploads/api/api_missing_or_wrong_fields"
+    private var courses: [Course] = []
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return courses.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath) as! CoursesCell
 
-        
+        let course = courses[indexPath.row]
+        cell.configure(with: course)
 
         return cell
+    }
+    
+    // MARK: - TableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
     
     func fetchDataV1() {
@@ -100,7 +108,18 @@ class CoursesTableViewController: UITableViewController {
     }
     
     func fetchData() {
+        guard let url = URL(string: jsonUrlTwo) else { return }
         
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            
+            guard let data = data else { return }
+            do {
+                self.courses = try JSONDecoder().decode([Course].self, from: data)
+            } catch let error {
+                print(error)
+            }
+            
+        }.resume()
     }
     
 
