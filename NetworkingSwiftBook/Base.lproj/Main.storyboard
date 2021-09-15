@@ -70,6 +70,7 @@
                         <segue destination="udw-de-lD4" kind="show" identifier="exampleThree" id="W1e-iO-2v6"/>
                         <segue destination="udw-de-lD4" kind="show" identifier="exampleTwo" id="iFv-bG-SWJ"/>
                         <segue destination="udw-de-lD4" kind="show" identifier="exampleOne" id="r1v-T4-6Ai"/>
+                        <segue destination="udw-de-lD4" kind="show" identifier="ourCoursesAlamofire" id="aC7-2C-1M7"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCz-Q8-0tj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -207,7 +208,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="u29-QZ-mjv"/>
+        <segue reference="aC7-2C-1M7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="secondaryLabelColor">

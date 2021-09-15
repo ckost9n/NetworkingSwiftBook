@@ -18,9 +18,11 @@
 		3C7B22B426EE2F4500926EE3 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */; };
 		3C7B22B626EF78C700926EE3 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B526EF78C600926EE3 /* Course.swift */; };
 		3C7B22B826EFBE8300926EE3 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */; };
+		E9D977CF6843F83CE7C792D9 /* Pods_NetworkingSwiftBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB193262C38200B19D3CFE19 /* Pods_NetworkingSwiftBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C4B3A9FB5DB9044A46101BD /* Pods-NetworkingSwiftBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingSwiftBook.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook.debug.xcconfig"; sourceTree = "<group>"; };
 		3C7B229226EE282200926EE3 /* NetworkingSwiftBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingSwiftBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7B229526EE282200926EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C7B229726EE282200926EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCell.swift; sourceTree = "<group>"; };
 		3C7B22B526EF78C600926EE3 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		D75FCD2CDDB1DE495086CE35 /* Pods-NetworkingSwiftBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingSwiftBook.release.xcconfig"; path = "Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook.release.xcconfig"; sourceTree = "<group>"; };
+		DB193262C38200B19D3CFE19 /* Pods_NetworkingSwiftBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingSwiftBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D977CF6843F83CE7C792D9 /* Pods_NetworkingSwiftBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10BBCF657D12177CCA4273E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C4B3A9FB5DB9044A46101BD /* Pods-NetworkingSwiftBook.debug.xcconfig */,
+				D75FCD2CDDB1DE495086CE35 /* Pods-NetworkingSwiftBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3C7B228926EE282100926EE3 = {
 			isa = PBXGroup;
 			children = (
 				3C7B229426EE282200926EE3 /* NetworkingSwiftBook */,
 				3C7B229326EE282200926EE3 /* Products */,
+				10BBCF657D12177CCA4273E0 /* Pods */,
+				BB22765EF4292F84D1A9713E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +99,14 @@
 			path = NetworkingSwiftBook;
 			sourceTree = "<group>";
 		};
+		BB22765EF4292F84D1A9713E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB193262C38200B19D3CFE19 /* Pods_NetworkingSwiftBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C7B22A626EE282600926EE3 /* Build configuration list for PBXNativeTarget "NetworkingSwiftBook" */;
 			buildPhases = (
+				4B9EBE66E50F4099C6629654 /* [CP] Check Pods Manifest.lock */,
 				3C7B228E26EE282200926EE3 /* Sources */,
 				3C7B228F26EE282200926EE3 /* Frameworks */,
 				3C7B229026EE282200926EE3 /* Resources */,
+				87E94AB114DC86A76AFDCC9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B9EBE66E50F4099C6629654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkingSwiftBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87E94AB114DC86A76AFDCC9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C7B228E26EE282200926EE3 /* Sources */ = {
@@ -303,6 +372,7 @@
 		};
 		3C7B22A726EE282600926EE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C4B3A9FB5DB9044A46101BD /* Pods-NetworkingSwiftBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -322,6 +392,7 @@
 		};
 		3C7B22A826EE282600926EE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75FCD2CDDB1DE495086CE35 /* Pods-NetworkingSwiftBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
