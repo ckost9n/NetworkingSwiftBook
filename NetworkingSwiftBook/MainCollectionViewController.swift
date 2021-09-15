@@ -14,6 +14,7 @@ enum UserActions: String, CaseIterable {
     case exampleThree = "Example Three"
     case exampleFour = "Example Four"
     case ourCourses = "Our Courses"
+    case postRequest = "Post Request"
 }
 
 class MainCollectionViewController: UICollectionViewController {
@@ -80,6 +81,8 @@ class MainCollectionViewController: UICollectionViewController {
             performSegue(withIdentifier: "exampleFour", sender: self)
         case .ourCourses:
             performSegue(withIdentifier: "ourCourses", sender: self)
+        case .postRequest:
+            postRequest()
         }
     }
 
@@ -93,4 +96,35 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: UIScreen.main.bounds.width - 48, height: 100)
     }
     
+}
+
+extension MainCollectionViewController {
+    private func postRequest() {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        
+        let userData = [
+            "course": "Networking",
+            "lesson": "GET and POST"
+        ]
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: userData, options: []) else { return }
+        request.httpBody = httpBody
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let response = response, let data = data else { return }
+            print(response)
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+            } catch {
+                print(error)
+            }
+            
+        }.resume()
+    }
 }
