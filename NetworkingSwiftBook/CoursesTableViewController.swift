@@ -143,5 +143,33 @@ class CoursesTableViewController: UITableViewController {
         }
     }
     
-
+    func postWithAlamofire() {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        
+        let userData: [String:Any] = [
+            "name": "Network Request",
+            "link": "https://swiftbook.ru/contents/spritekit-full-game-dev/",
+            "imageUrl": "https://swiftbook.ru/wp-content/uploads/sites/2/2018/08/notifications-course-with-background.png",
+            "numberOfLessons": "18",
+            "numberOfTests": "10"
+        ]
+        
+        AF.request(url, method: .post, parameters: userData).validate().responseJSON { responseData in
+            
+            switch responseData.result {
+            case .success(let value):
+                
+                guard let jsonData = value as? [String:Any] else { return }
+                
+                let course = Course(dictCourse: jsonData)
+                self.courses.append(course)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

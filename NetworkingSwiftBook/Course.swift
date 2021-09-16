@@ -9,8 +9,10 @@ struct Course: Decodable {
     let name: String?
     let link: String?
     let imageUrl: String?
-    let numberOfLessons: Int?
-    let numberOfTests: Int?
+    let numberOfLessons: String?
+    let numberOfTests: String?
+//    let numberOfLessons: Int?
+//    let numberOfTests: Int?
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -37,8 +39,10 @@ struct Course: Decodable {
         name = dictCourse["name"] as? String
         link = dictCourse["link"] as? String
         imageUrl = dictCourse["imageUrl"] as? String
-        numberOfLessons = dictCourse["number_of_lessons"] as? Int
-        numberOfTests = dictCourse["number_of_tests"] as? Int
+        numberOfLessons = dictCourse["numberOfLessons"] as? String
+        numberOfTests = dictCourse["numberOfTests"] as? String
+//        numberOfLessons = dictCourse["number_of_lessons"] as? Int
+//        numberOfTests = dictCourse["number_of_tests"] as? Int
     }
 }
 
