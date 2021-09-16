@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,8 +18,20 @@
 		3C7B22B426EE2F4500926EE3 /* CoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */; };
 		3C7B22B626EF78C700926EE3 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B526EF78C600926EE3 /* Course.swift */; };
 		3C7B22B826EFBE8300926EE3 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */; };
-		E9D977CF6843F83CE7C792D9 /* Pods_NetworkingSwiftBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB193262C38200B19D3CFE19 /* Pods_NetworkingSwiftBook.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C22218226F2433200821CE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1C4B3A9FB5DB9044A46101BD /* Pods-NetworkingSwiftBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingSwiftBook.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -37,7 +49,6 @@
 		3C7B22B526EF78C600926EE3 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
 		D75FCD2CDDB1DE495086CE35 /* Pods-NetworkingSwiftBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingSwiftBook.release.xcconfig"; path = "Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook.release.xcconfig"; sourceTree = "<group>"; };
-		DB193262C38200B19D3CFE19 /* Pods_NetworkingSwiftBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingSwiftBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D977CF6843F83CE7C792D9 /* Pods_NetworkingSwiftBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +68,6 @@
 				1C4B3A9FB5DB9044A46101BD /* Pods-NetworkingSwiftBook.debug.xcconfig */,
 				D75FCD2CDDB1DE495086CE35 /* Pods-NetworkingSwiftBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -102,7 +111,6 @@
 		BB22765EF4292F84D1A9713E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB193262C38200B19D3CFE19 /* Pods_NetworkingSwiftBook.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 				3C7B228F26EE282200926EE3 /* Frameworks */,
 				3C7B229026EE282200926EE3 /* Resources */,
 				87E94AB114DC86A76AFDCC9F /* [CP] Embed Pods Frameworks */,
+				3C22218226F2433200821CE0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

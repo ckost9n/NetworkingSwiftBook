@@ -126,7 +126,21 @@ class CoursesTableViewController: UITableViewController {
     func fetchDataAlamofire() {
         guard let url = URL(string: jsonUrlTwo) else { return }
         
-        
+        AF.request(url, method: .get).validate().responseJSON { responseJSON in
+            
+            switch responseJSON.result {
+            case .success(let value):
+                
+                self.courses = Course.getCourses(from: value)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 
