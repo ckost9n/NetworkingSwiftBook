@@ -9,7 +9,7 @@ import UIKit
 
 class CoursesCell: UITableViewCell {
     
-    @IBOutlet var courseImage: UIImageView!
+    @IBOutlet var courseImage: ImageView!
     
     @IBOutlet var courseNameLabel: UILabel!
     @IBOutlet var numberOfLessons: UILabel!
@@ -19,15 +19,16 @@ class CoursesCell: UITableViewCell {
         courseNameLabel.text = course.name
         numberOfLessons.text = "Number of lessons: \(course.numberOfLessons ?? "0")"
         numberOfTests.text = "Number of tests: \(course.numberOfTests ?? "0")"
+        courseImage.fetchImage(with: course.imageUrl)
         
-        DispatchQueue.global().async {
-            guard let imageUrl = URL(string: course.imageUrl!) else { return }
-            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-            
-            DispatchQueue.main.async {
-                self.courseImage.image = UIImage(data: imageData)
-            }
-        }
+//        DispatchQueue.global().async {
+//            guard let imageUrl = URL(string: course.imageUrl!) else { return }
+//            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+//
+//            DispatchQueue.main.async {
+//                self.courseImage.image = UIImage(data: imageData)
+//            }
+//        }
         
     }
 

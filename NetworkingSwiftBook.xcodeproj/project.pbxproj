@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2221AB26F4A65300821CE0 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2221AA26F4A65300821CE0 /* ImageView.swift */; };
 		3C7B229626EE282200926EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B229526EE282200926EE3 /* AppDelegate.swift */; };
 		3C7B229826EE282200926EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B229726EE282200926EE3 /* SceneDelegate.swift */; };
 		3C7B229D26EE282200926EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7B229B26EE282200926EE3 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		1C4B3A9FB5DB9044A46101BD /* Pods-NetworkingSwiftBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingSwiftBook.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingSwiftBook/Pods-NetworkingSwiftBook.debug.xcconfig"; sourceTree = "<group>"; };
+		3C2221AA26F4A65300821CE0 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		3C7B229226EE282200926EE3 /* NetworkingSwiftBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingSwiftBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7B229526EE282200926EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C7B229726EE282200926EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				3C7B22B726EFBE8300926EE3 /* CoursesTableViewController.swift */,
 				3C7B22B126EE2E6900926EE3 /* UserActionCell.swift */,
 				3C7B22B326EE2F4500926EE3 /* CoursesCell.swift */,
+				3C2221AA26F4A65300821CE0 /* ImageView.swift */,
 				3C7B229B26EE282200926EE3 /* Main.storyboard */,
 				3C7B229E26EE282600926EE3 /* Assets.xcassets */,
 				3C7B22A026EE282600926EE3 /* LaunchScreen.storyboard */,
@@ -237,6 +240,7 @@
 				3C7B22B226EE2E6900926EE3 /* UserActionCell.swift in Sources */,
 				3C7B22AE26EE2D1800926EE3 /* ImageViewController.swift in Sources */,
 				3C7B22B426EE2F4500926EE3 /* CoursesCell.swift in Sources */,
+				3C2221AB26F4A65300821CE0 /* ImageView.swift in Sources */,
 				3C7B229826EE282200926EE3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
