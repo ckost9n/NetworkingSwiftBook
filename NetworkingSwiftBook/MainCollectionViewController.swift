@@ -19,6 +19,7 @@ enum UserActions: String, CaseIterable {
     case postAlamofire = "Post with Alamofire"
 }
 
+
 class MainCollectionViewController: UICollectionViewController {
     
     private let userActions = UserActions.allCases
